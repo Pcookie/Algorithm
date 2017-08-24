@@ -13,12 +13,12 @@ class MyStack2 :
         MyStack2.__stackData.append(num)
     def pop(self):
         if (len(MyStack2.__stackData) == 0):
-            print("Your stack is empty")
+            raise Exception("Your stack is empty")
         MyStack2.__stackMin.pop()
         return MyStack2.__stackData.pop()
     def getmin(*args):
         if(len(MyStack2.__stackMin) == 0):
-            print("Your stack is empty")
+            raise Exception("Your stack is empty")
         return MyStack2.__stackMin[-1]
 def a():
     sta = MyStack2()

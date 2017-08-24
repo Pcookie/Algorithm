@@ -10,14 +10,14 @@ class MyStack1 :
         MyStack1.__stackData.append(num)
     def pop(self):
         if (len(MyStack1.__stackData) == 0):
-            print("Your stack is empty")
+            raise Exception("Your stack is empty")
         value = MyStack1.__stackData.pop()
         if (value == MyStack1.getmin()):
             MyStack1.__stackMin.pop()
         return value
     def getmin(*args):
         if(len(MyStack1.__stackMin) == 0):
-            print("Your stack is empty")
+            raise Exception("Your stack is empty")
         # print(MyStack1.__stackMin)
         # print(MyStack1.__stackData)
         return MyStack1.__stackMin[-1]
